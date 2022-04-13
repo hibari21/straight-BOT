@@ -24,7 +24,7 @@ public class Main{
         JDA jda = null;
 
         try {
-            jda = JDABuilder.createDefault("OTYwMTI3MzQ2ODM5NTQzODM4.Ykl6RQ.iZT5CsWOEREK2fn8N--sHfIFyNA").build();
+            jda = JDABuilder.createDefault(System.getenv("")).build();
         } catch (LoginException e) {
             e.printStackTrace();
         }
