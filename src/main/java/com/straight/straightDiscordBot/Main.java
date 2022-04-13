@@ -24,7 +24,7 @@ public class Main{
         JDA jda = null;
 
         try {
-            jda = JDABuilder.createDefault(System.getenv("")).build();
+            jda = JDABuilder.createDefault(System.getenv("DISCORD_TOKEN")).build();
         } catch (LoginException e) {
             e.printStackTrace();
         }
