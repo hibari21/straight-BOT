@@ -16,6 +16,8 @@ public class Main{
 
     public static final Logger logger = JDALogger.getLog("BOT");
 
+    static final String token = System.getenv().get("DISCORD_TOKEN");
+
     public static void main(String[] args) {
 
         logger.info(String.valueOf(new Date()));
@@ -24,7 +26,7 @@ public class Main{
         JDA jda = null;
 
         try {
-            jda = JDABuilder.createDefault(System.getenv("DISCORD_TOKEN")).build();
+            jda = JDABuilder.createDefault(token).build();
         } catch (LoginException e) {
             e.printStackTrace();
         }
